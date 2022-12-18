@@ -1,0 +1,29 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+   }
+
+   @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 0;
+   }
+}
+
+.section--team {
+  background-color: var(--third-background-color);
+ 
+  @media screen and (min-width: 1199.9px) {
+    padding-bottom: 94px;
+}
+}
+
+/*----------------Benefits--------------*/
+
+
+.section-benefits__title {
+  display: none;
+}

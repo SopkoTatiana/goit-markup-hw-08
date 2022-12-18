@@ -1,0 +1,72 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.projects__list {
+  @extend %card-set;
+}
+
+.projects__item {
+  @extend %card-set__items;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.projects__item:hover .projects__overflow-description {
+  transform: translateY(0%);
+}
+
+.projects__description {
+  padding: 20px 24px;
+  max-width: 370px;
+  border: 1px solid #eeeeee;
+}
+
+.projects__sub-title {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 4px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+}
+
+.projects__name {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+/*----------overflow-------------*/
+
+.projects__overflow-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 23px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--adress-text-color);
+  background-color: var(--accent-text-color);
+  transform: translateY(100%);
+  transition-property: transform, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.projects__overflow {
+  position: relative;
+  overflow: hidden;
+}
